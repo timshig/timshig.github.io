@@ -1,0 +1,153 @@
+.sec-title.for-recom.in-ex {
+    margin-bottom: 20px;
+}
+
+.sec-top-desc {
+    font-size: 14px;
+    color: $softblack;
+    line-height: 1.7;
+}
+
+.gallery {
+    @include flex-align-center;
+    justify-content: space-between;
+    margin: 40px 0 90px 0;
+}
+
+.g-item {
+    width: calc((100% / 5) - 22px);
+    cursor: pointer;
+}
+
+.gi-tmp {
+    width: 100%;
+    height: 127px;
+    @include radius(4px 21px 4px 21px);
+    object-fit: cover;
+}
+
+.ex-opt-item {
+    @include flex-align-center;
+    margin-bottom: 30px;
+    img {
+        @include size(45px, 45px);
+    }
+    .ctn {
+        margin-left: 35px;
+        span {
+            display: block;
+            font: 12px $lm;
+            color: $softblack;
+            margin-bottom: 7px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+
+.gi-main-pic {
+    .modal-dialog {
+        max-width: 100%;
+        margin: 0;
+    }
+    .modal-content {
+        display: block;
+        text-align: center;
+        border: none;
+        background: none;
+        img {
+            width: auto;
+            max-width: 70vw;
+        }
+    }
+}
+
+.exp-bottom {
+    text-align: right;
+    margin-top: 30px;
+}
+
+.exp-right-box {
+    padding: 35px;
+    border: 1px solid $silver;
+    @include radius(4px 30px 4px 30px);
+    height: 100%;
+}
+
+.exp-check-list {
+    padding-top: 18px;
+    .checkbox {
+        margin-bottom: 20px;
+    }
+}
+
+.ex2-big-image {
+    text-align: center;
+    margin-bottom: 30px;
+    img {
+        @include radius(4px 60px 4px 60px);
+    }
+}
+
+.how-to-enjoy {
+    padding: 45px 0 0 30px;
+}
+
+
+
+@media (max-width: 1199px) {
+    .gi-tmp {
+        height: 94px;
+    }
+}
+
+@media (max-width: 991px) {
+    .how-to-enjoy {
+        padding: 40px 0 0 0;
+    }
+    .gi-main-pic {
+        .modal-content {
+            img {
+                max-width: 90vw;
+            }
+        }
+    }
+    .sec-title.for-recom.in-ex {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 575px) {
+    .exp-right-box {
+        padding: 23px;
+        .sec-title.for-recom.in-ex {
+            font-size: 23px;
+        }
+    }
+    .ex-opt-item img {
+        width: 40px;
+        height: 40px;
+    }
+    .ex-opt-item .ctn {
+        margin-left: 25px;
+    }
+}
+
+@media (max-width: 479px) {
+    .gi-tmp {
+        @include radius(4px 13px 4px 13px);
+    }
+    .gi-tmp {
+        height: 89px;
+    }
+}
+
+@media (max-width: 419px) {
+    .g-item {
+        width: calc(20% - 4px);
+    }
+    .gi-tmp {
+        height: 77px;
+    }
+}

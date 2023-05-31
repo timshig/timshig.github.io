@@ -1,0 +1,59 @@
+.btn {
+    min-width: 128px;
+    height: 39px;
+    line-height: 39px !important;
+    @include radius(4px 21px 4px 21px);
+    font: 14px $lr;
+    padding: 0 10px;
+}
+
+.btn-blue {
+    background: $blue;
+    color: $white;
+    box-shadow: 2px 2px 30px fade($blue, '33');
+    &:hover {
+        color: $white;
+        background: darken($blue, 4);
+    }
+    &.border {
+        background: $white;
+        border: 1px solid $blue !important;
+        color: $blue;
+        box-shadow: none;
+        &:hover {
+            background: fade($blue, '11');
+        }
+    }
+}
+
+.btn-white {
+    background: transparent;
+    color: $black;
+    border: 1px solid $gray;
+    &:hover {
+        background: fade($gray, '55');
+        border-color: darken($gray, 5);
+    }
+}
+
+.btn-orange {
+    border: 1px solid $orange;
+    color: $orange !important;
+    background: fade($orange, '11');
+    &:hover {
+        background: fade($orange, '15');
+    }
+}
+
+.google-btn {
+    @include flex-align-center;
+    padding: 0 17px;
+    i {
+        font-size: 16px;
+    }
+    span {
+        font-size: 10px;
+        margin-left: 10px;
+    }
+}
+

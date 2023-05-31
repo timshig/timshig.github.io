@@ -1,0 +1,38 @@
+.aboutus-content {
+    width: 80%;
+    font: 13px $lr;
+    color: #707070;
+    line-height: 1.7;
+
+    h1 {
+        font: 28px $mm;
+        margin-bottom: 20px;
+        color: $black;
+    }
+
+    h2, h3, h4 {
+        font: 14px $mb;
+        margin: 24px 0 10px 0;
+        color: #707070;
+    }
+
+    img {
+        margin: 40px;
+    }
+}
+
+@media (max-width: 991px) {
+    .aboutus-content {
+        width: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    .aboutus-content {
+        img {
+            float: initial !important;
+            display: block;
+            margin: 20px auto;
+        }
+    }
+}

@@ -1,0 +1,237 @@
+.sec-title.for-recom {
+    margin-bottom: 70px;
+    text-align: left;
+}
+
+.rcmi-image-area {
+    width: 355px;
+    img {
+        @include size(100%, 170px);
+        object-fit: cover;
+        @include radius(4px 23px 4px 23px);
+    }
+}
+
+.recoml-item {
+    display: flex;
+    height: 187px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border: 1px solid $silver;
+    padding: 7px;
+    @include radius(4px 23px 4px 23px);
+    margin-bottom: 22px;
+}
+
+.rcmi-content {
+    padding: 30px 50px 0 50px;
+}
+
+.rcmi-c-top {
+    padding: 14px 0 0 30px;
+    width: calc(100% - 355px);
+}
+
+.rcmic-name-area {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.rcmic-name {
+    .txt {
+        font: 12px $lm;
+        color: $softblack;
+        margin-right: 20px;
+    }
+    &:hover {
+        .txt {
+            color: $orange
+        }
+    }
+}
+
+.rcmic-desc {
+    font-size: 10px;
+    color: $softblack;
+    line-height: 1.7;
+    overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+    line-clamp: 2; 
+   -webkit-box-orient: vertical;
+}
+
+.rate {
+    @include flex-align-center;
+    i {
+        position: relative;
+        font-size: 16px;
+        color: $silver;
+        margin-right: 5px;
+        &:last-child {
+            margin-right: 0;
+        }
+        &.active {
+            color: $orange;
+        }
+        &.half-active {
+            &::after {
+                content: "\e907";
+                font-family: "icomoon";
+                @include abso(0, 0);
+                color: $orange;
+                clip-path: polygon(0 0, 50% 0, 50% 100%, 0% 100%);
+            }
+        }
+    }
+}
+
+.rcmiv-foot {
+    @include flex-sb;
+    margin-top: 21px;
+    padding: 0 20px 0 35px;
+}
+
+.rcmicfl-list {
+    display: flex;
+    li {
+        position: relative;
+        padding: 0 30px;
+        &:first-child {
+            padding-left: 0;
+        }
+        &:last-child {
+            padding-right: 0;
+            &::after {
+                display: none;
+            }
+        }
+        * {
+            display: block;
+        }
+        &::after {
+            @include block-ba;
+            @include size(1px, 85%);
+            background: $silver;
+            position: absolute;
+            top: 7.5%;
+            right: 0;
+        }
+        .icon {
+            font-size: 17px;
+            color: $orange;
+        }
+        .label {
+            font-size: 8.5px;
+            margin: 5px 0 5px 0;
+            white-space: nowrap;
+        }
+        .value {
+            font: 11px $lm;
+            white-space: nowrap;
+        }
+    }
+}
+
+.rcmicf-right {
+    @include trans(0.2s);
+    margin-top: 7px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1199px) {
+    .recoml-item {
+        height: auto;
+        flex-direction: initial;
+    }
+    .rcmic-desc {
+        -webkit-line-clamp: 4;
+        line-clamp: 4;
+    }
+    .rcmi-image-area img {
+        height: 152px;
+    }
+    .rcmiv-foot {
+        width: 100%;
+        padding-left: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .rcmicf-right {
+        display: block;
+    }
+    .rcmiv-foot {
+        width: 100%;
+        padding-left: 20px;
+    }
+    .sec-title.for-recom {
+        font-size: 23px;
+        margin-bottom: 45px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .recoml-item {
+        display: block;
+        @include radius(4px 20px 4px 20px);
+    }
+    .rcmi-image-area {
+        width: 100%;
+        img {
+            @include size(100%, auto);
+            @include radius(4px 20px 4px 20px);
+        }
+    }
+    .rcmi-c-top {
+        width: 100%;
+        padding: 20px 20px 10px 20px;
+    }
+    .rcmic-desc {
+        display: block;
+    }
+    .rcmiv-foot {
+        flex-wrap: wrap;
+        padding: 0;
+        justify-content: center;
+    }
+    .rcmicf-right {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        padding: 25px 10px 10px 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .rcmicf-left {
+        width: 100%;
+        padding: 0 20px;
+    }
+    .rcmicfl-list {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        li {
+            width: 50% !important;
+            padding: 0;
+            &::after {
+                display: none;
+            }
+            &:nth-child(1),
+            &:nth-child(2) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    .rcmicfl-list li .value {
+        font-size: 16px;
+    }
+}

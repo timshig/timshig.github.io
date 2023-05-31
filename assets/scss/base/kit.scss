@@ -1,0 +1,332 @@
+@mixin trans($args...) {
+    -webkit-transition: $args;
+    -moz-transition: $args;
+    -ms-transition: $args;
+    -o-transition: $args;
+    transition: $args;
+}
+
+@mixin radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
+@mixin fix-cover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin abso($t, $l) {
+    position: absolute;
+    top: $t;
+    left: $l;
+}
+
+@mixin flex-align-center {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-full-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-sb {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@mixin no-select {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+}
+
+@mixin ellipsis($mwith) {
+    display: block;
+    max-width: $mwith;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+@mixin rotate($args...) {
+    transform: rotate($args);
+    -webkit-transform: rotate($args);
+    -moz-transform: rotate($args);
+    -ms-transform: rotate($args);
+    -o-transform: rotate($args);
+}
+
+@mixin rotate-x($args...) {
+    transform: rotateX($args);
+    -webkit-transform: rotateX($args);
+    -moz-transform: rotateX($args);
+    -ms-transform: rotateX($args);
+    -o-transform: rotateX($args);
+}
+
+@mixin rotate-y($args...) {
+    transform: rotateY($args);
+    -webkit-transform: rotateY($args);
+    -moz-transform: rotateY($args);
+    -ms-transform: rotateY($args);
+    -o-transform: rotateY($args);
+}
+
+@mixin scale($args...) {
+    transform: scale($args);
+    -webkit-transform: scale($args);
+    -moz-transform: scale($args);
+    -ms-transform: scale($args);
+    -o-transform: scale($args);
+}
+
+@mixin anim($name, $time, $delay) {
+    animation: $name $time $delay;
+    -webkit-animation: $name $time $delay;
+}
+
+@mixin padding-x($left, $right) {
+    [dir=ltr] & {
+        padding-left: $right;
+        padding-right: $left;
+    }
+    [dir=rtl] & {
+        padding-left: $left;
+        padding-right: $right;
+    }
+}
+
+@mixin margin-x($left, $right) {
+    [dir=ltr] & {
+        margin-left: $right;
+        margin-right: $left;
+    }
+    [dir=rtl] & {
+        margin-left: $left;
+        margin-right: $right;
+    }
+}
+
+@mixin left($value) {
+    [dir=ltr] & {
+        right: $value;
+    }
+    [dir=rtl] & {
+        left: $value;
+    }
+}
+
+@mixin right($value) {
+    [dir=ltr] & {
+        left: $value;
+    }
+    [dir=rtl] & {
+        right: $value;
+    }
+}
+
+@mixin translate-x($value) {
+    [dir=ltr] & {
+        transform: translate(-$value, 0);
+        -webkit-transform: translate(-$value, 0);
+        -moz-transform: translate(-$value, 0);
+        -ms-transform: translate(-$value, 0);
+        -o-transform: translate(-$value, 0);
+    }
+    [dir=rtl] & {
+        transform: translate($value, 0);
+        -webkit-transform: translate($value, 0);
+        -moz-transform: translate($value, 0);
+        -ms-transform: translate($value, 0);
+        -o-transform: translate($value, 0);
+    }
+}
+
+@mixin translate-y($value) {
+    transform: translate(0, $value);
+    -webkit-transform: translate(0, $value);
+    -moz-transform: translate(0, $value);
+    -ms-transform: translate(0, $value);
+    -o-transform: translate(0, $value);
+}
+
+@mixin float-right() {
+    [dir=rtl] & {
+        float: right;
+    }
+    [dir=ltr] & {
+        float: left;
+    }
+}
+
+@mixin float-left() {
+    [dir=rtl] & {
+        float: left;
+    }
+    [dir=ltr] & {
+        float: right;
+    }
+}
+
+@mixin text-right() {
+    [dir=rtl] & {
+        text-align: right;
+    }
+    [dir=ltr] & {
+        text-align: left;
+    }
+}
+
+@mixin text-left() {
+    [dir=rtl] & {
+        text-align: left;
+    }
+    [dir=ltr] & {
+        text-align: right;
+    }
+}
+
+@mixin ltr-in-rtl() {
+    [dir=rtl] & {
+        direction: ltr;
+    }
+    [dir=ltr] & {
+        direction: rtl;
+    }
+}
+
+@mixin pos-size($x, $scale) {
+    [dir=ltr] & {
+        transform: translate(-$x, 0) scale($scale);
+        -webkit-transform: translate(-$x, 0) scale($scale);
+        -moz-transform: translate(-$x, 0) scale($scale);
+        -ms-transform: translate(-$x, 0) scale($scale);
+        -o-transform: translate(-$x, 0) scale($scale);
+    }
+    [dir=rtl] & {
+        transform: translate($x, 0) scale($scale);
+        -webkit-transform: translate($x, 0) scale($scale);
+        -moz-transform: translate($x, 0) scale($scale);
+        -ms-transform: translate($x, 0) scale($scale);
+        -o-transform: translate($x, 0) scale($scale);
+    }
+}
+
+@mixin border-right($value) {
+    [dir=ltr] & {
+        border-left: $value;
+    }
+    [dir=rtl] & {
+        border-right: $value;
+    }
+}
+
+@mixin rel-top($value) {
+    position: relative;
+    top: $value;
+}
+
+@mixin filter($value) {
+    -webkit-filter: $value;
+    filter: $value;
+}
+
+@mixin light-hover() {
+    @include trans(0.2s);
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+@mixin dark-hover($color) {
+    @include trans(0.2s);
+    &:hover {
+        background-color: darken($color, 5%);
+    }
+}
+
+@mixin blur($value) {
+    filter: blur($value);
+    -webkit-filter: blur($value);
+}
+
+@mixin block-btn() {
+    display: block;
+    padding: 0;
+    border: 0;
+}
+
+@mixin flex-btn() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    border: 0;
+}
+
+@mixin size($width, $height) {
+    width: $width;
+    height: $height;
+}
+
+@mixin same-size($size) {
+    width: $size;
+    height: $size;
+}
+
+@mixin hide-scroll() {
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+@mixin underline {
+    position: relative;
+    border-bottom: 1px solid currentColor;
+}
+
+@function fade($color, $value) {
+    @return #{$color} + $value;
+}
+
+@mixin font($name, $size, $color) {
+    font-family: $name;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin avatar($width, $height) {
+    width: $width;
+    height: $height;
+    @include radius(50%);
+    object-fit: cover;
+}
+
+@mixin backdrop($value) {
+    -webkit-backdrop-filter: blur($value);
+    backdrop-filter: blur($value);
+}
+
+@mixin blackwhite($value) {
+    -webkit-filter: grayscale($value);
+    filter: grayscale($value);
+}
+
+@mixin block-ba {
+    content: '';
+    display: block;
+}

@@ -1,0 +1,192 @@
+.recoml-item.for-holiday {
+    height: 228px;
+
+    .rcmiv-foot {
+        margin-top: 0;
+    }
+
+    .rcmicfl-list {
+        li {
+            @include flex-align-center;
+            padding: 0 15px;
+            &:first-child {
+                padding-left: 0;
+            }
+            &:last-child {
+                padding-right: 0;
+            }
+            i {
+                margin-right: 5px;
+            }
+            .label {
+                font: 12px $lr;
+                margin: 0 6px 0 0;
+            }
+            .value {
+                font: 12px $lm;
+            }
+        }
+    }
+
+    .rcmic-desc {
+        display: flex;
+        flex-wrap: wrap;
+        padding-right: 30px;
+        .text {
+            margin: 0;
+            text-align: justify;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 6;
+            line-clamp: 6; 
+            -webkit-box-orient: vertical;
+        }
+        .left, .right {
+            width: 50%;
+            padding-left: 30px;
+        }
+        .left {
+            padding-right: 30px;
+            padding-left: 0;
+            border-right: 1px solid $silver;
+        }
+    }
+
+    .rcmi-image-area img {
+        height: 211px;
+    }
+}
+
+.recoml-item.for-holiday.with-number {
+    position: relative;
+    .rcmic-desc {
+        width: 83%;
+    }
+}
+
+.fhwn-num {
+    position: absolute;
+    @include size(74px, 101px);
+    top: 27px;
+    right: 55px;
+}
+
+
+@media (max-width: 1199px) {
+    .recoml-item.for-holiday {
+        height: auto;
+        .rcmic-desc {
+            display: block;
+            .left, .right {
+                width: 100%;
+                padding: 0;
+            }
+            .left {
+                border-right: none;
+                border-bottom: 1px solid $silver;
+                padding: 0 0 10px 0;
+                margin-bottom: 10px;
+            }
+            .text {
+                overflow: initial;
+                display: block;
+            }
+        }
+        .rcmiv-foot {
+            padding-bottom: 11px;
+        }
+    }
+    .fhwn-num {
+        right: 25px;
+    }
+}
+
+@media (max-width: 991px) {
+    .recoml-item.for-holiday {
+        display: block;
+        width: 100%;
+        .rcmi-image-area {
+            width: 100%;
+            img {
+                height: 200px;
+            }
+        }
+        .rcmi-c-top {
+            width: 100%;
+        }
+    }
+    .fhwn-num {
+        top: auto;
+        bottom: 84px;
+    }
+}
+
+@media (max-width: 767px) {
+    .recoml-item.for-holiday {
+        .rcmiv-foot {
+            flex-wrap: initial;
+            padding: 15px;
+            .rcmicf-right {
+                padding: 0;
+            }
+        }
+        .rcmic-desc {
+            padding: 0;
+        }
+    }
+    .recoml-item.for-holiday.with-number {
+        .rcmi-image-area {
+            width: calc(100% - 69px);
+        }
+        .rcmic-desc {
+            width: 100%;
+        }
+    }
+    .fhwn-num {
+        top: -1px;
+        right: -1px;
+        bottom: auto;
+    }
+}
+
+@media (max-width: 575px) {
+    .recoml-item.for-holiday {
+        .rcmiv-foot {
+            display: block;
+        }
+        .rcmicfl-list {
+            display: block;
+            li {
+                padding: 0 !important;
+                &:after {
+                    display: none;
+                }
+                margin-top: 10px;
+            }
+        }
+        .rcmicf-right {
+            margin-top: 10px;
+            text-align: right;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .recoml-item.for-holiday.with-number {
+        .rcmi-image-area {
+            img {
+                height: 170px;
+            }
+        }
+    }
+}
+
+@media (max-width: 379px) {
+    .recoml-item.for-holiday.with-number {
+        .rcmi-image-area {
+            img {
+                height: 150px;
+            }
+        }
+    }
+}

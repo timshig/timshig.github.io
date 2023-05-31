@@ -1,0 +1,43 @@
+@media (max-width: 1199px) {
+    .ibs-box {
+        width: 265px;
+        height: 184px;
+        padding: 23px 16px 0 16px;
+    }
+    .ibsbi-title {
+        font-size: 13px;
+        margin-bottom: 14px;
+    }
+    .ibsbi-desc {
+        font-size: 12px;
+    }
+    .ifs-content {
+        padding: 35px 0 0 29px;
+    }
+}
+
+@media (max-width: 991px) {
+    .ibs-box {
+        height: auto;
+        padding: 23px 16px 18px 16px;
+    }
+    .index-first-sec {
+        padding-top: 0;
+        height: 300px;
+    }
+    .ifs-inner {
+        padding: 0;
+    }
+    .ifsi-title {
+        font-size: 22px;
+    }
+    .ifsi-desc {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 380px) {
+    .ifs-content {
+        padding-left: 0;
+    }
+}

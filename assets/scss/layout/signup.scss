@@ -1,0 +1,196 @@
+.signup-grid {
+    padding-top: 150px;
+    padding-bottom: 100px;
+}
+
+.text-field {
+    position: relative;
+}
+
+.tf-label {
+    @include abso(-6px, 13px);
+    background: $white;
+    font: 10px $lb;
+    padding: 0 5px;
+    pointer-events: none;
+    z-index: 1;
+    color: $blue;
+}
+
+.tf-input {
+    @include size(100%, 45px);
+    @include radius(4px 21px 4px 21px);
+    border: 1px solid $blue;
+    font: 12px $lm;
+    padding-left: 19px;
+    &::placeholder {
+        color: $silver;
+    }
+    &:focus {
+        border-color: $blue;
+    }
+}
+
+.signup-form {
+    padding-top: 74px !important;
+    .colx {
+        &:nth-child(odd) {
+            padding-right: 40px;
+        }
+        &:nth-child(even) {
+            padding-left: 40px;
+        }
+        .text-field {
+            margin-bottom: 35px;
+        }
+    }
+}
+
+.checkbox {
+    display: block;
+    @include no-select;
+    input {
+        display: none;
+        &:checked ~ .ch-main {
+            .chm-box {
+                &::after {
+                    display: block
+                }
+            }
+        }
+    }
+}
+
+.ch-main {
+    @include flex-align-center;
+}
+
+.chm-box {
+    @include flex-full-center;
+    @include size(22px, 22px);
+    min-width: 22px;
+    @include radius(5px);
+    border: 1px solid $black;
+    cursor: pointer;
+    margin-right: 14px;
+    &::after {
+        content: "\e908";
+        font-family: "icomoon";
+        font-size: 11px;
+        display: none;
+    }
+}
+
+.chm-txt {
+    font: 14px $lr;
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+.signup-btns {
+    @include flex-align-center;
+    margin-top: 35px;
+    .or {
+        margin: 0 28px;
+        font-size: 11px;
+        color: $silver;
+    }
+}
+
+.p-logo {
+    display: inline-block;
+    img {
+        width: 100%;
+        max-width: 400px;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 1199px) {
+    .signup-btns .or {
+        margin: 0 25px;
+    }
+    .p-logo img {
+        width: 100%;
+        max-width: 241px;
+    }
+}
+
+@media (max-width: 991px) {
+    .signup-form {
+        padding-top: 35px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    
+    .signup-grid {
+        padding-top: 0;
+        .right {
+            order: 1;
+            margin-bottom: 20px;
+            padding-top: 0 !important;
+        }
+        .left {
+            order: 2
+        }
+    }
+    .p-logo {
+        display: block;
+        text-align: center;
+    }
+    .signup-grid {
+        padding-top: 27px;
+    }
+    .btn {
+        min-width: 113px;
+        height: 43px;
+        line-height: 43px !important;
+        font-size: 14px;
+        padding: 0 13px;
+    }
+    .google-btn span {
+        font-size: 11px;
+        margin-left: 9px;
+    }
+    .google-btn i {
+        font-size: 15px;
+    }
+    .signup-btns {
+        @include flex-full-center;
+        
+    }
+    .signup-btns .or {
+        margin: 0 17px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 575px) {
+    .signup-form {
+        padding: 35px;
+        .colx {
+            padding: 0 !important;
+        }
+    }
+}
+
+@media (max-width: 479px) {
+    .google-btn {
+        @include size(43px, 43px);
+        min-width: 43px;
+        padding: 0;
+        justify-content: center;
+        @include radius(4px 19px 4px 19px);
+        
+        span {
+            display: none;
+        }
+    }
+}

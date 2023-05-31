@@ -1,0 +1,602 @@
+.index-first-sec {
+    position: relative;
+    @include size(100%, auto);
+    background: url('../img/airport.png') no-repeat;
+    background-size: cover;
+    @include radius(15px);
+    overflow: hidden;
+    padding-top: 30%;
+}
+
+.ifs-content {
+    @include fix-cover;
+    padding: 67px 0 0 32px;
+}
+
+.ifsi-title {
+    font: 28px $mb;
+    color: $black;
+    margin-bottom: 6px;
+    text-shadow: 0 0 15px fade($black, '66');
+}
+
+.ifsi-desc {
+    color: $orange;
+    font: 14px $mm;
+}
+
+.index-bottom-sec {
+    margin-top: -40px;
+}
+
+.ibs-box {
+    position: relative;
+    @include size(341px, 195px);
+    @include radius(4px 30px 4px 30px);
+    border: 1px solid $silver;
+    background: fade($white, '77');
+    @include backdrop(22px);
+    text-align: center;
+    padding: 37px 30px 0 30px;
+    z-index: 1;
+
+    &:nth-child(2) {
+        margin: 0 50px;
+    }
+}
+
+.icon-chevron {
+    display: inline-block;
+    &.right {
+        @include rotate(-90deg);
+    }
+}
+
+.ibsbi-title {
+    font: 14px $mb;
+    margin-bottom: 17px;
+}
+
+.ibsbi-desc {
+    font: 12px $lr;
+    opacity: 0.7;
+    line-height: 1.6;
+}
+
+.ibsbi-btn {
+    position: absolute;
+    bottom: -17px;
+    left: calc(50% - 25px);
+    @include size(35px !important, 35px !important);
+    @include flex-full-center;
+    min-width: unset !important;
+    @include radius(4px 12px 4px 12px !important);
+    margin: 0 auto;
+}
+
+.index-section {
+    position: relative;
+    height: 723px;
+}
+
+.convs-area {
+    position: absolute;
+    @include size(650px, 566px);
+    top: 0;
+    right: 0;
+    background: url('../img/index-sec-1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    .obj {
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.ca-woman {
+    background-image: url('../img/index-sec-3.png');
+    @include size(202px, 284px);
+    bottom: -19px;
+    left: 70px;
+    &::after {
+        @include block-ba;
+        position: absolute;
+        bottom: 0;
+        left: -99px;
+        width: 313px;
+        height: 42px;
+        @include radius(100%);
+        background: #F4F4F4;
+        z-index: -1;
+    }
+}
+
+.ca-friends {
+    background-image: url('../img/index-sec-2.png');
+    bottom: 86px;
+    right: 102px;
+    @include size(176px, 283px);
+}
+
+.ca-message {
+    @include flex-full-center;
+    @include size(265px, 147px);
+    @include radius(100%);
+    color: $white;
+    text-align: center;
+    &::after {
+        @include block-ba;
+        position: absolute;
+        right: 36px;
+        bottom: 7px;
+        @include size(50px, 50px);
+        background: red;
+        @include rotate(15deg);
+    }
+    span {
+        position: relative;
+        z-index: 2;
+        font: 14px $lr;
+        line-height: 1.6;
+        @include scale(0.88);
+    }
+    &.white {
+        top: 61px;
+        right: 161px;
+        background: #dbe7eb;
+        color: $black;
+        &::after {
+            background: #dbe7eb;
+        }
+    }
+    &.orange {
+        left: -110px;
+        bottom: 244px;
+        background: $orange;
+        color: $white;
+        &::after {
+            background: $orange;
+        }
+    }
+}
+
+.issec-content {
+    padding-top: 90px;
+}
+
+.iscc-above {
+    display: block;
+    font: 21px $mm;
+    color: $orange
+}
+
+.iscc-title {
+    font: 49px $mb;
+    margin: 15px 0;
+}
+
+.iscc-desc {
+    font: 15px $lr;
+    max-width: 389px;
+    color: #777;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.index-popular {
+    margin: 120px 0;
+    padding: 0 30px;
+}
+
+.ipo-box {
+    position: relative;
+    @include size(100%, 385px);
+    border: 1px solid $silver;
+    @include radius(4px 30px 4px 30px);
+    padding: 40px 30px 0 30px;
+}
+
+.ipob-img {
+    height: 195px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.ipob-text {
+    font-size: 12px;
+    color: $softblack;
+    overflow: hidden;
+   display: -webkit-box;
+   -webkit-line-clamp: 4;
+    line-clamp: 4; 
+   -webkit-box-orient: vertical;
+   line-height: 1.5;
+}
+
+.opob-btn-holder {
+    position: absolute;
+    bottom: -17px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.mid-sec-title {
+    text-align: center;
+    font: 35px $mb;
+    margin-bottom: 50px;
+}
+
+.tfo-top {
+    @include flex-sb;
+    padding-bottom: 30px;
+}
+
+.tfot-left, .tfot-right {
+    width: 100%;
+    max-width: 426px;
+}
+
+.tfot-title {
+    font: 28px $lb;
+    margin-bottom: 11px;
+}
+
+.tfot-desc {
+    font: 14px $lm;
+    color: #B8B8B8;
+    line-height: 1.6;
+}
+
+.newsletter {
+    position: relative;
+    width: 448px;
+    input {
+        width: 100%;
+        height: 46px;
+        border: 1px solid $silver;
+        @include radius(4px 24px 4px 24px);
+        font-size: 14px;
+        padding-left: 25px;
+        &::placeholder {
+            color: #B8B8B8;
+        }
+        &:focus {
+            border-color: $blue;
+        }
+    }
+    .btn {
+        position: absolute;
+        top: 4px;
+        right: 4px;
+        height: 38px;
+        line-height: 38px !important;
+    }
+}
+
+.nl-hint {
+    display: block;
+    font-size: 10px;
+    color: #B8B8B8;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.tfo-bottom {
+    padding: 50px 0;
+    border-top: 1px solid #E4E4E4;
+    border-bottom: 1px solid #E4E4E4;
+}
+
+.tfob-title {
+    font: 21px $mb;
+    margin-bottom: 17px;
+}
+
+.tfob-desc {
+    font: 14px $lm;
+    color: #707070;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.tfob-fm {
+    @include flex-sb;
+    font-size: 14px;
+    b {
+        font-family: $lb;
+    }
+    span {
+        font-family: $lm;
+        color: #707070;
+    }
+}
+
+.tfob-links-grid {
+   display: flex;
+   justify-content: flex-end;
+}
+
+.tfobl-col {
+    width: auto;
+    padding-right: 74px;
+    ul {
+        li {
+            margin-bottom: 15px;
+            a {
+                color: #050A30;
+                font: 14px $lm;
+                &:hover {
+                    opacity: 0.6;
+                }
+            }
+        }
+    }
+}
+
+.tfob-content {
+    max-width: 443px;
+}
+
+.tfobl-titr {
+    font: 17px $lb;
+    margin-bottom: 20px;
+    color: $blue;
+}
+
+.tfo-copyright {
+    @include flex-sb;
+    margin-top: 30px;
+}
+
+.tfoc-text {
+    color: #707070;
+    font-size: 12px;
+    opacity: 0.5;
+}
+
+.tfoc-social {
+    @include flex-align-center;
+    li {
+        margin-right: 14px;
+        &:last-child {
+            margin-right: 0;
+        }
+        a {
+            @include flex-full-center;
+            @include size(42px, 42px);
+            @include radius(100%);
+            background: $blue;
+            @include trans(0.2s);
+            i {
+                color: $white;
+                font-size: 18px;
+            }
+            &:hover {
+                background: $black;
+            }
+        }
+    }
+}
+
+.ibsm-parent {
+    display: flex;
+    justify-content: center
+}
+
+.trip-footer {
+    padding-top: 50px;
+}
+
+
+@media (max-width: 1199px) {
+    .tfob-content {
+        max-width: 424px;
+    }
+    .tfob-links-grid {
+        justify-content: space-between;
+    }
+    .tfobl-col {
+        padding-right: 0;
+    }
+    .index-popular {
+        padding: 0;
+    }
+    .ipob-img {
+        height: 145px;
+    }
+    .ipob-text {
+        -webkit-line-clamp: 5;
+        line-clamp: 5;
+    }
+    .ipo-box {
+        height: 321px;
+        padding: 19px 12px 0 12px;
+    }
+    .opob-btn-holder {
+        bottom: -19px;
+        .btn {
+            min-width: 125px;
+            height: 38px;
+            line-height: 37px !important;
+        }
+    }
+    .index-section {
+        height: 320px;
+    }
+    .index-help {
+        padding-top: 115px;
+    }
+    .convs-area {
+        @include size(368px, 320px);
+    }
+    .ca-woman {
+        @include size(130px, 182px);
+        bottom: -19px;
+        left: 37px;
+        &::after {
+            left: -51px;
+            width: 187px;
+            height: 22px;
+        }
+    }
+    .ca-friends {
+        @include size(98px, 157px);
+        bottom: 43px;
+        right: 49px;
+    }
+    .ca-message {
+        width: 188px;
+        height: 93px;
+        &::after {
+            right: 28px;
+            bottom: 5px;
+        }
+        span {
+            font-size: 10px;
+        }
+        &.orange {
+            left: -96px;
+            bottom: 144px;
+        }
+        &.white {
+            top: 31px;
+            right: 74px;
+        }
+    }
+    .issec-content {
+        padding-top: 27px;
+    }
+    .iscc-above {
+        font-size: 15px;
+    }
+    .iscc-title {
+        font-size: 33px;
+        margin: 10px 0;
+    }
+    .iscc-desc {
+        font: 14px Lexend-Regular;
+        width: 90%;
+    }
+}
+
+@media (max-width: 991px) {
+    .trip-footer {
+        padding-top: 0;
+    }
+    .newsletter {
+        width: 100%;
+    }
+    .ibsm-parent {
+        display: block;
+    }
+    .ibs-box {
+        width: 90% !important;
+        max-width: initial;
+        margin: 0 auto 35px auto !important;
+    }
+    .tfoc-text {
+        font-size: 11px;
+    }
+    .tfoc-social li {
+        margin-right: 7px;
+    }
+    .tfob-content {
+        max-width: 100%;
+    }
+    .tfob-links-grid {
+        margin-top: 50px;
+    }
+    .tfot-left, .tfot-right {
+        max-width: 100%;
+    }
+    .tfo-top {
+        display: block;
+    }
+    .tfot-left {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .index-popular {
+        margin: 59px 0 84px 0;
+    }
+    .ipo-box {
+        margin-bottom: 50px;
+    }
+    .index-section {
+        height: auto;
+        padding: 88px 0 150px 0;
+    }
+    .index-help {
+        padding-top: 0;
+    }
+    .issec-content {
+        text-align: center;
+        padding: 0;
+    }
+    .iscc-desc {
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto 28px auto;
+    }
+    .ibs-box {
+        max-width: 90%;
+        height: auto;
+        padding-bottom: 30px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .tfo-copyright {
+        flex-wrap: wrap;
+    }
+    .tfoc-social {
+        width: 100%;
+        order: 1;
+        justify-content: center;
+    }
+    .tfoc-text {
+        order: 2;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 575px) {
+    .tfob-links-grid {
+        display: block;
+    }
+    .tfobl-col {
+        margin-bottom: 30px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+    .tfot-title {
+        font-size: 26px;
+    }
+    .mid-sec-title {
+        font-size: 27px;
+    }
+    .ifs-inner {
+        padding-left: 30px;
+    }
+    .ifsi-title {
+        font-size: 26px;
+    }
+    .ifsi-desc {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 380px) {
+    .ifs-inner {
+        padding-left: 10px;
+        padding-right: 10px;
+        width: 100%;
+        text-align: center;
+    }
+}

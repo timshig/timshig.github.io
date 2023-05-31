@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip For Adventure</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/select2/dist/css/select2.min.css">
+    <link rel="stylesheet" href="../node_modules/daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" href="../assets/css/style.min.css">
+</head>
+<body>
+    
+    <div class="trip">
+
+        <header class="nav-bar">
+            <div class="container h-100">
+                <div class="nb-inner">
+
+                    <button class="nb-mobile-menu-toggler">
+                        <i class="icon-menu"></i>
+                    </button>
+
+                    <a href="index.html" class="nb-logo" title="Trip for adventure">
+                        <img src="../assets/img/logo1.svg" class="nbl-1" alt="Trip for adventure Logo">
+                        <img src="../assets/img/logo2.svg" class="nbl-2" alt="Trip for adventure Logo">
+                    </a>
+
+                    <div class="nb-menu-wrapper">
+                        <ul class="nb-menu">
+                            <li class="nbm-item">
+                                <a href="index.html" class="nbmi-link">
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="nbm-item">
+                                <a href="#" class="nbmi-link">
+                                    <span>Blog</span>
+                                </a>
+                            </li>
+                            <li class="nbm-item">
+                                <a href="#" class="nbmi-link">
+                                    <span>Contact us</span>
+                                </a>
+                            </li>
+                            <li class="nbm-item">
+                                <a href="about.html" class="nbmi-link">
+                                    <span>About us</span>
+                                </a>
+                            </li>
+                            <li class="nbm-item">
+                                <a href="personalize1.html" class="nbmi-link active">
+                                    <span>Personalize your trip</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <button class="nb-close-menu">&times;</button>
+                    </div>
+                    <div class="mobile-menu-shadow"></div>
+
+                    <a href="signup.html" class="btn btn-blue header-btn">
+                        <i class="icon-profile"></i>
+                        <span>Sign up</span>
+                    </a>
+
+                </div>
+            </div>
+        </header>
+
+        <div class="trip-content">
+            
+            <div class="container">
+
+                <section class="white-box">
+                    <h1 class="sec-title">Personalize your trip</h1>
+
+                    <div class="row">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="text-field">
+                                <span class="tf-label">Traveler type?</span>
+                                <select class="tf-select">
+                                    <option value="0">Any</option>
+                                    <option value="1">Couple</option>
+                                    <option value="2">Solo</option>
+                                    <option value="3">Friends</option>
+                                    <option value="4" selected>Family</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="text-field">
+                                <span class="tf-label">Budget?</span>
+                                <select class="tf-select">
+                                    <option value="0">Any</option>
+                                    <option value="1">Budget</option>
+                                    <option value="2">Mid-range</option>
+                                    <option value="3">Luxury</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="text-field">
+                                <span class="tf-label">When?</span>
+                                <select class="tf-select">
+                                    <option value="0">January</option>
+                                    <option value="1">February</option>
+                                    <option value="2">March</option>
+                                    <option value="3" selected>April</option>
+                                    <option value="4">May</option>
+                                    <option value="5">June</option>
+                                    <option value="6">July</option>
+                                    <option value="7">August</option>
+                                    <option value="8">September</option>
+                                    <option value="9">October</option>
+                                    <option value="10">November</option>
+                                    <option value="11">December</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="text-field">
+                                <span class="tf-label">Region preference?</span>
+                                <select class="tf-select">
+                                    <option value="0">Any</option>
+                                    <option value="1">Asia/Oceania</option>
+                                    <option value="2">Europe</option>
+                                    <option value="3">America</option>
+                                    <option value="4">Africa</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="per-more d-none">
+                        <div class="row">
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="text-field">
+                                    <span class="tf-label">Departure City?</span>
+                                    <i class="icon-calendar"></i>
+                                    <select class="tf-select">
+                                        <option value="0">Any</option>
+                                        <option value="1" selected>Melbourne</option>
+                                        <option value="2">Sydney</option>
+                                        <option value="3">London</option>
+                                        <option value="4">Singapore</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="text-field">
+                                    <span class="tf-label">Activity level?</span>
+                                    <i class="icon-calendar"></i>
+                                    <select class="tf-select">
+                                        <option value="0">Any</option>
+                                        <option value="1">Low intensity</option>
+                                        <option value="2">Moderate intensity</option>
+                                        <option value="3">High intensity</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <div class="text-field">
+                                    <span class="tf-label">Accommodation preference?</span>
+                                    <select class="tf-select">
+                                        <option value="0">Any</option>
+                                        <option value="1">Hostels/Guesthouses</option>
+                                        <option value="2">Hotels/Rentals</option>
+                                        <option value="3">Luxury hotels</option>
+                                        <option value="4">Unique stays</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field-sec-row">
+                            <div class="fsr-title">
+                                <h2 class="fsrt-text">What are you looking for ?</h2>
+                                <span class="fsrt-hint">(Select in the order of preference)</span>
+                            </div>
+                            <div class="iconic-options">
+
+                                <label class="ioption-checkbox">
+                                    <input type="checkbox">
+                                    <div class="ioc-box">
+                                        <img src="../assets/img/beach.png" alt="">
+                                        <span>Beach</span>
+                                    </div>
+                                </label>
+
+                                <label class="ioption-checkbox">
+                                    <input type="checkbox">
+                                    <div class="ioc-box">
+                                        <img src="../assets/img/nature.png" alt="">
+                                        <span>Nature</span>
+                                    </div>
+                                </label>
+
+                                <label class="ioption-checkbox">
+                                    <input type="checkbox" checked>
+                                    <div class="ioc-box">
+                                        <img src="../assets/img/night-life.png" alt="">
+                                        <span>Night life</span>
+                                    </div>
+                                </label>
+
+                                <label class="ioption-checkbox">
+                                    <input type="checkbox" checked>
+                                    <div class="ioc-box">
+                                        <img src="../assets/img/culture.png" alt="">
+                                        <span>Culture</span>
+                                    </div>
+                                </label>
+
+                                <label class="ioption-checkbox">
+                                    <input type="checkbox">
+                                    <div class="ioc-box">
+                                        <img src="../assets/img/adventure.png" alt="">
+                                        <span>Adventure</span>
+                                    </div>
+                                </label>
+
+                                <label class="ioption-checkbox">
+                                    <input type="checkbox" checked>
+                                    <div class="ioc-box">
+                                        <img src="../assets/img/fun-activities.png" alt="">
+                                        <span>Fun Activities</span>
+                                    </div>
+                                </label>
+
+                                <label class="ioption-checkbox">
+                                    <input type="checkbox">
+                                    <div class="ioc-box">
+                                        <img src="../assets/img/shopping.png" alt="">
+                                        <span>Shopping</span>
+                                    </div>
+                                </label>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="text-right pt-3 per-btn-parent">
+                        <button type="button" class="btn btn-orange open-per">
+                            <span>More Criteria</span>
+                            <i class="icon-chevron"></i>
+                        </button>
+                    </div>
+
+
+                </section>
+                
+            </div>
+
+
+        </div>
+
+        <div class="trip-foot">
+            <div class="container">
+                <div class="tf-inner">
+                    <div class="tfi-left">
+                        <span class="tfl-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</span>
+                    </div>
+                    <div class="tfi-right">
+                        <a href="personalize1.html" class="btn btn-white mr-3">Back</a>
+                        <a href="recommended.html" class="btn btn-blue">Search</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../node_modules/select2/dist/js/select2.min.js"></script>
+    <script src="../node_modules/moment/moment.js"></script>
+    <script src="../node_modules/daterangepicker/daterangepicker.js"></script>
+    <script src="../assets/js/scripts.js"></script>
+</body>
+</html>

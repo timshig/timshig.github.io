@@ -1,0 +1,231 @@
+.nav-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    @include size(100%, 100px);
+    background: fade($white, 'ee');
+    @include trans(0.2s);
+    z-index: 900;
+    &.moved {
+        height: 80px
+    }
+}
+
+.nb-inner {
+    @include flex-sb;
+    height: 100%;
+}
+
+.nb-logo {
+    @include flex-align-center;
+}
+
+.nbl-1 {
+    @include size(181px, 39px);
+}
+
+.nbl-2 {
+    display: none;
+    @include size(50px, 50px);
+}
+
+.nb-menu {
+    @include flex-align-center;
+}
+
+.nbm-item {
+    position: relative;
+    margin-right: 46px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+.nbmi-link {
+    font: 14px $lr;
+    color: $gray;
+    @include trans(0.2s);
+    &:hover, &.active {
+        color: $black;
+        &::after {
+            width: 100%;
+            opacity: 1;
+        }
+    }
+    &::after {
+        @include block-ba;
+        position: absolute;
+        bottom: -15px;
+        right: 0;
+        @include size(0, 5px);
+        @include radius(6px 20px 6px 20px);
+        background: $black;
+        max-width: 60px;
+        opacity: 0;
+        @include trans(0.3s);
+    }
+}
+
+.header-btn {
+    i {
+        display: none;
+    }
+}
+
+.nb-mobile-menu-toggler {
+    display: none;
+    @include size(32px, 32px);
+    justify-content: center;
+    align-items: center;
+    @include radius(5px 10px 5px 10px);
+    border: 1px solid $gray;
+    background: $white;
+    i {
+        font-size: 20px;
+    }
+}
+
+.mobile-menu-shadow {
+    display: none;
+    position: fixed;
+    z-index: 998;
+    top: 0;
+    left: 0;
+    background: #00000044;
+    @include backdrop(5px);
+    @include size(100%, 100%);
+}
+
+.nb-close-menu {
+    display: none;
+    background: transparent;
+    color: $white;
+    opacity: 0.4;
+    font-size: 39px;
+    position: absolute;
+    top: 0;
+    right: 21px;
+    &:hover {
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1199px) {
+    .nbm-item {
+        margin-right: 30px;
+    }
+    .nbmi-link {
+        font-size: 14px;
+    }
+    .nb-logo span {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    .nbl-2 {
+        display: block;
+    }
+    .nbl-1 {
+        display: none;
+    }
+    .nb-mobile-menu-toggler {
+        display: flex;
+    }
+    .nbl-2 {
+        @include size(35px, 35px);
+    }
+    .header-btn {
+        @include size(32px, 32px !important);
+        min-width: unset !important;
+        @include flex-full-center;
+        line-height: 1 !important;
+        @include radius(5px 10px 5px 10px !important);
+        i {
+            display: block;
+            font-size: 20px;
+        }
+        span {
+            display: none;
+        }
+    }
+    .nav-bar {
+        height: 50px;
+        &.moved {
+            height: 50px;
+        }
+    }
+    .nb-menu-wrapper {
+        position: fixed;
+        top: 9px;
+        left: -270px;
+        @include size(260px, calc(100% - 18px));
+        @include radius(6px 30px 6px 30px);
+        background-color: $blue;
+        padding: 70px 0 0 20px;
+        overflow: hidden;
+        z-index: 999;
+        @include trans(0.4s);
+        &::before {
+            @include block-ba;
+            @include size(85px, 142px);
+            background: url('../img/menu-effect.png') no-repeat;
+            background-size: 100% 100%;
+            position: absolute;
+            left: 0;
+            bottom: 50px;
+        }
+        &::after {
+            content: 'All rights reserved';
+            font-size: 12px;
+            color: $white;
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
+        &.open {
+            left: 9px;
+            & ~ .mobile-menu-shadow {
+                display: block;
+            }
+        }
+    }
+    .nb-menu {
+        display: block;
+    }
+    .nbmi-link {
+        color: $white;
+        font: 16px $lr;
+        opacity: 0.5;
+        &::after {
+            display: none;
+        }
+        &:hover, &.active {
+            opacity: 1;
+            color: $white;
+        }
+    }
+    .nbm-item {
+        margin: 0 0 21px 0;
+    }
+    .nb-close-menu {
+        display: block;
+    }
+}

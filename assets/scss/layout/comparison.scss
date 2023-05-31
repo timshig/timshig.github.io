@@ -1,0 +1,132 @@
+.cprs-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cprs-item {
+    display: flex;
+    width: 492px;
+    justify-content: flex-end;
+    padding-top: 88px;
+    margin-bottom: 40px;
+}
+
+.cprsi-box {
+    position: relative;
+    width: 401px;
+    border: 1px solid $silver;
+    @include radius(4px 30px 4px 30px);
+    padding: 10px;
+    background: $white;
+}
+
+.cprsi-box {
+    .rcmic-name {
+        display: block;
+        margin-bottom: 10px;
+        .txt {
+            color: $blue !important;
+        }
+    }
+    .rcmicfl-list li {
+        padding: 0 15px;
+    }
+}
+
+.cprsib-text-area {
+    padding: 35px 0 0 46px;
+}
+
+.cprsib-img {
+    @include abso(-55px, -91px);
+    @include size(139px, 97px);
+    @include radius(4px 20px 4px 20px);
+    object-fit: cover;
+}
+
+.cprsib-num {
+    position: absolute;
+    top: -45px;
+    right: -8px;
+    @include size(74px, 101px);
+}
+
+.cprsib-bottom {
+    @include flex-sb;
+    margin-top: 12px;
+    padding-left: 0;
+    
+    .btn {
+        width: 88px;
+        min-width: 100%;
+        font-size: 12px;
+        height: 33px;
+        line-height: 30px !important;
+        margin-top: 8px;
+    }
+}
+
+
+
+@media (max-width: 1199px) {
+    .cprsib-img {
+        top: -62px;
+        left: -33px;
+    }
+    .rcmic-desc {
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+    }
+    .cprs-item {
+        width: 400px;
+    }
+    .cprsi-box {
+        width: 368px;
+    }
+    .cprsib-bottom {
+        display: block;
+    }
+}
+
+@media (max-width: 991px) {
+    .cprs-list {
+        display: block;
+    }
+    .cprs-item {
+        width: 100%;
+    }
+    .cprsi-box {
+        width: calc(100% - 32px);
+    }
+    .cprsib-bottom {
+        display: flex;
+    }
+}
+
+@media (max-width: 575px) {
+    .cprsib-num {
+        top: -40px;
+        right: -2px;
+        width: 56px;
+        height: 79px;
+    }
+    .cprsib-bottom {
+        display: block;
+    }
+    .cprsi-box {
+        width: 100%;
+    }
+    .cprsib-text-area {
+        padding: 96px 0 0 25px;
+    }
+    .cprsib-img {
+        top: -44px;
+        left: 0;
+        width: 250px;
+        height: 132px;
+    }
+    // .rcmicfl-list {
+    //     flex-wrap: initial;
+    // }
+}
